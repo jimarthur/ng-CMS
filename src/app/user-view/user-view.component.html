@@ -1,0 +1,7 @@
+<div *ngIf="user">
+  <h1>{{user.user.first_name}} {{user.user.last_name}}</h1>
+  <div><strong>Username:</strong> {{user.user.username}}</div>
+  <div><strong>Email:</strong> {{user.user.email}}</div>
+  <button [routerLink]="['/users/edit/', user._id]">Edit</button>
+  <button (click)="deleteUser(user._id)">Delete</button>
+</div>
